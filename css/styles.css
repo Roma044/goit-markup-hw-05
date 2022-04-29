@@ -150,6 +150,8 @@ p {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
 }
 .nav-list .active {
   color: var(--accent-color);
@@ -179,6 +181,8 @@ p {
   display: flex;
   justify-content: center;
   text-align: center;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-mail:hover,
@@ -191,6 +195,8 @@ p {
   width: 10px;
   height: 16px;
   fill: currentColor;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .contact-list .item .contact-item + .item .contact-item {
@@ -210,6 +216,8 @@ p {
 .contact-list .list:hover,
 .contact-list .list:focus {
   color: var(--accent-color);
+
+  transition: color 250ms var(--timing-function);
 }
 
 /* --------------------------Hero-------------------------- */
@@ -358,6 +366,35 @@ p {
 .project-section .img {
   display: block;
 }
+
+.project .proj-style {
+  position: relative;
+}
+
+/* ---------------------------------Надпис поверх картинки what we do----------------------- */
+
+.project .proj-inform {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proj-inform-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-white-color);
+}
+
 /* --------------------------Команда-------------------------- */
 
 .workers {
@@ -430,6 +467,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .workers-soc-page:hover,
@@ -439,6 +478,8 @@ p {
 
 .workers-soc-icon {
   fill: var(--soc-icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .workers-soc-page:hover .workers-soc-icon,
@@ -465,6 +506,8 @@ p {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .clients-list {
@@ -480,6 +523,8 @@ p {
   width: 106px;
   height: 60px;
   fill: var(--soc-icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -529,6 +574,13 @@ p {
   margin-bottom: 9px;
 }
 
+.footer-address-link:hover,
+.footer-address-link:focus {
+  color: var(--primary-white-color);
+
+  transition: color 250ms var(--timing-function);
+}
+
 /* ----------------------------ПРИСОЕДИНЯЙТЕСЬ ICONS-------------------------- */
 
 .footer-container {
@@ -566,6 +618,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-socials-icon {
@@ -612,6 +666,9 @@ p {
   font-size: 16px;
   line-height: 1.62;
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 
 .button-main:hover,
@@ -647,6 +704,8 @@ p {
   display: block;
   text-decoration: none;
   color: var(--secondary-text-color);
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .example-us .item:nth-child(3n) {
@@ -707,7 +766,8 @@ p {
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.5) rotate(250deg);
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
 }
 
 .modal {
@@ -717,8 +777,8 @@ p {
   transition: transorm 250ms var(--timing-function);
   transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -736,4 +796,9 @@ p {
   box-sizing: border-box;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.close-icon {
+  width: 100%;
+  height: 100%;
 }
